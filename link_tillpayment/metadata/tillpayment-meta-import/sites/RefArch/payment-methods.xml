@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment-settings xmlns="http://www.demandware.com/xml/impex/paymentsettings/2009-09-15">
+    <payment-method method-id="TILL_APM">
+        <name xml:lang="x-default">Till APM</name>
+        <enabled-flag>true</enabled-flag>
+        <processor-id>TILLPAYMENT_APM</processor-id>
+    </payment-method>
+	
+	<payment-method method-id="CREDIT_CARD">
+        <name xml:lang="x-default">Credit Card</name>
+        <enabled-flag>true</enabled-flag>
+        <processor-id>TILLPAYMENT_CREDIT</processor-id>
+    </payment-method>
+
+</payment-settings>

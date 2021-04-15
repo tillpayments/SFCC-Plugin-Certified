@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="CustomerPaymentInstrument">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="tillpaymentRegistrationID">
+                <display-name xml:lang="x-default">Registration ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Tillpayment">
+                <display-name xml:lang="x-default">Tillpayment</display-name>
+                <attribute attribute-id="tillpaymentRegistrationID"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+	    <type-extension type-id="OrderPaymentInstrument">
+        <custom-attribute-definitions>
+           <attribute-definition attribute-id="tillPaymentAuthAmount">
+                <display-name xml:lang="x-default">Tillpayment Auth Amount</display-name>
+                <type>double</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillPaymentCaptureAmount">
+                <display-name xml:lang="x-default">Tillpayment Capture Amount</display-name>
+                <type>double</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillPaymentPaidAmount">
+                <display-name xml:lang="x-default">Tillpayment Paid Amount</display-name>
+                <type>double</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillPaymentTransactionID">
+                <display-name xml:lang="x-default">Tillpayment Transaction ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillPaymentTransactionReference">
+                <display-name xml:lang="x-default">Tillpayment Transaction Reference</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillPaymentTransactionStatus">
+                <display-name xml:lang="x-default">Tillpayment Transaction Status</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillPaymentTransactionType">
+                <display-name xml:lang="x-default">Tillpayment Transaction Type</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+			<attribute-definition attribute-id="tillpaymentApmExtraData">
+                <display-name xml:lang="x-default">APM extraData</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+               <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+			<attribute-definition attribute-id="tillpaymentRegistrationID">
+                <display-name xml:lang="x-default">Registration ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Extended Attributes">
+                <display-name xml:lang="x-default">Extended Attributes</display-name>
+                <attribute attribute-id="tillPaymentTransactionID"/>
+                <attribute attribute-id="tillPaymentTransactionType"/>
+                <attribute attribute-id="tillPaymentTransactionReference"/>
+                <attribute attribute-id="tillPaymentAuthAmount"/>
+                <attribute attribute-id="tillPaymentPaidAmount"/>
+                <attribute attribute-id="tillPaymentTransactionStatus"/>
+                <attribute attribute-id="tillPaymentCaptureAmount"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+        <type-extension type-id="Basket">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="tillpaymentCustomerPaymentInstrumentUUID">
+                <display-name xml:lang="x-default">Customer Payment Instrument UUID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+    <type-extension type-id="Order">
+        <custom-attribute-definitions>
+           <attribute-definition attribute-id="isTillpaymentOrder">
+                <display-name xml:lang="x-default">Tillpayment Order</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillPaymentTransactionHistory">
+                <display-name xml:lang="x-default">Tillpayment Transaction History</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillPaymentCumulativeTransaction">
+                <display-name xml:lang="x-default">Tillpayment Cumulative Transaction</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillpaymentCustomerPaymentInstrumentUUID">
+                <display-name xml:lang="x-default">Customer Payment Instrument UUID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+		    <attribute-definition attribute-id="enableTillpayment">
+                <display-name xml:lang="x-default">Enable Tillpayment</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+			<attribute-definition attribute-id="tillPaymentMode">
+                <display-name xml:lang="x-default">Payment Mode</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Preauthorize</display>
+                        <value>preauth</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Debit</display>
+                        <value>debit</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+			<attribute-definition attribute-id="tillpaymentSharedSecret">
+                <display-name xml:lang="x-default">Shared Secret</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+			<attribute-definition attribute-id="tillpaymentApiUsername">
+                <display-name xml:lang="x-default">API Username</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="tillpaymentApiPassword">
+                <display-name xml:lang="x-default">API Password</display-name>
+                <type>password</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+			<attribute-definition attribute-id="tillpaymentApiKey">
+                <display-name xml:lang="x-default">Api Key</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+			<attribute-definition attribute-id="tillpayment3DSecureMode">
+                <display-name xml:lang="x-default">3D Secure Mode</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">OFF</display>
+                        <value>OFF</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">OPTIONAL</display>
+                        <value>OPTIONAL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">MANDATORY</display>
+                        <value>MANDATORY</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+	    <attribute-definition attribute-id="tillpaymentApmExtraData">
+                <display-name xml:lang="x-default">APM extraData</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Tillpayment">
+                <display-name xml:lang="x-default">Tillpayment</display-name>
+				<attribute attribute-id="enableTillpayment"/>
+				<attribute attribute-id="tillPaymentMode"/>
+				<attribute attribute-id="tillpaymentSharedSecret"/>
+				<attribute attribute-id="tillpaymentApiUsername"/>
+				<attribute attribute-id="tillpaymentApiPassword"/>
+				<attribute attribute-id="tillpaymentApiKey"/>
+				<attribute attribute-id="tillpayment3DSecureMode"/>
+				<attribute attribute-id="tillpaymentApmExtraData"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

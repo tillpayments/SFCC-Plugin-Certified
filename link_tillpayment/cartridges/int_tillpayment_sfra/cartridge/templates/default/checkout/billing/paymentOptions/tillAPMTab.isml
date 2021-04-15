@@ -1,0 +1,9 @@
+<isset name="ApmObj" value="${JSON.parse(dw.system.Site.current.preferences.custom.tillpaymentApmExtraData)}" scope="page" />
+<isloop items="${ApmObj}" var="APM">
+    <li class="nav-item" data-method-id="${paymentOption.ID}">
+        <a class="nav-link till-apm-${(APM.paymentMethod).replace(/ +/g, '')}-tab" data-toggle="tab" href="${'#till-apm-' + (APM.paymentMethod).replace(/ +/g, '') + '-content'}" role="tab">
+            <isprint value="${APM.paymentMethod}" />
+        </a>
+    </li>
+</isloop>
+ 

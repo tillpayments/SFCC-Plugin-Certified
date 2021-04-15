@@ -1,0 +1,12 @@
+<isif condition="${pdict.status === 'Success'}">
+    <isset name="URL" value="${URLUtils.https('Order-Confirm', 'ID', pdict.order.orderNo, 'token', pdict.order.orderToken)}" scope="page" />
+<iselseif condition="${pdict.status === 'Error'}">
+    <isset name="URL" value="${URLUtils.https('Checkout-Begin', 'stage', 'payment', 'tillErrorMessage', Resource.msg('checkout.order.submission.3dsecure.error', 'tillpayment', null))}" scope="page" />
+<iselseif condition="${pdict.status === 'Cancel'}">
+    <isset name="URL" value="${URLUtils.https('Checkout-Begin', 'stage', 'payment', 'tillErrorMessage', Resource.msg('checkout.order.submission.3dsecure.cancelled', 'tillpayment', null))}" scope="page" />
+<iselse>
+    <isset name="URL" value="${URLUtils.https('Checkout-Begin', 'stage', 'payment', 'tillErrorMessage', Resource.msg('checkout.order.submission.3dsecure.default', 'tillpayment', null))}" scope="page" />
+</isif>
+<script>
+    window.top.location.href = '<isprint value="${URL}" encoding="jshtml" />';
+</script>

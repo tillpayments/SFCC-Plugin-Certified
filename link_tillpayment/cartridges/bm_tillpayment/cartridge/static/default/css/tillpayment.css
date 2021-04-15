@@ -1,0 +1,131 @@
+/******** Tillpayment custom CSS *******/
+.tillpayment-module * {
+	box-sizing: border-box;
+}
+.tillpayment-module h1 {
+	border-bottom: 0.06em solid #dadada;
+	color: #84bd00;
+	font-size: 2em;
+	font-weight: 600;
+	line-height: 1.2em;
+	padding: 0.5em 0;
+}
+.tillpayment-module h2 {
+	font-size: 1.05em;
+	font-weight: normal;
+	margin: 0.32em;
+	text-transform: none;
+}
+.tillpayment-module .infobox {
+	margin-bottom: 0.6em;
+}
+.tillpayment-module .popup-holder {
+	width: 100%;
+    text-align: center;
+}
+.tillpayment-module .operations-holder {
+    background-color: #fff;
+    display: none;
+    padding: 1em;
+    border: 0.06em solid #A9A9A9;
+    float:left;
+    margin-top:4em;
+    margin-left: 40em;
+}
+.tillpayment-module .operations-holder input[type=text] {
+	width: 5.75em;
+	padding: 0 0.32em;
+	text-align: right;
+}
+.tillpayment-module .operations-holder input[type=radio] {
+	position: relative;
+    top: 0.12em;
+}
+.tillpayment-module .operations-holder button {
+	border-radius: 0;
+    padding: 0.38em 2.3em;
+    color: #fff;
+    background-color: #808080;
+    border-color: #808080;
+}
+.tillpayment-module .operations-holder button:hover {
+	background-color: #000000;
+}
+.tillpayment-module .operations-holder button[disabled]:hover {
+	color: #fff;
+}
+.tillpayment-module .operations-holder table {
+	width: 18em;
+}
+.tillpayment-module .operations-holder table td {
+	padding: 0.38em 0;
+}
+.tillpayment-module .operations-holder table td label {
+	margin:0;
+}
+#filtertableProjects tfoot {
+	display: table-header-group;
+}
+#filtertableProjects tfoot tr th {
+	border-bottom: 0.06em solid #dadada;
+}
+.overview_documentation{
+	font-size: 1.5em;
+	padding-top: 1.15em;
+}
+table#documentation{
+	border-top: 0.6em solid #dadada;
+}
+.overview_title_description p{
+	font-size: 0.7em;
+	font-style: italic;
+}
+.dt-table.dataTable {
+    border-collapse: collapse;
+}
+.dt-table td{
+  	border: 0.06em solid #dadada;
+}
+.tillpayment-module .infobox {
+    border-top: 0.06em solid #dadada;
+}
+.infobox_title_search {
+    padding: 0.4em;
+}
+.order-list-content {
+    border-top: 0.06em solid #dadada;
+}
+.order-list-empty td {
+	padding-top: 1em;
+}
+.pagecursortxt.hide-10 .ten {
+	display: none;
+}
+.pagecursortxt.hide-50 .fifty {
+	display: none;
+}
+.pagecursortxt.hide-100 .hundred {
+	display: none;
+}
+.pagecursorbtn {
+	text-decoration: none;
+}
+a.button.show-all{
+	margin-left: 6em;
+}
+.refund-input{
+	width: 5.75em;
+}
+.refund-button{
+	background-color: #84bd00;
+	border: 0.06em solid #84bd00;
+	border-radius: 0.12em;
+	width: 9em;
+	height: 1.5em;
+	font-weight: bold;
+	color: #fff;
+}
+.refund-button:hover{
+	color: #84bd00;
+	background-color: #fff;
+}

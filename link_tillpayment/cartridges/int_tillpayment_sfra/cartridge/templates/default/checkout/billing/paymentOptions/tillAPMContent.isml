@@ -1,0 +1,14 @@
+<isset name="ApmObj" value="${JSON.parse(dw.system.Site.current.preferences.custom.tillpaymentApmExtraData)}" scope="page" />
+<isloop items="${ApmObj}" var="APM">
+    <div class="tab-pane till-apm-${(APM.paymentMethod).replace(/ +/g, '')}-content" id="till-apm-${(APM.paymentMethod).replace(/ +/g, '')}-content" role="tabpanel">
+	    <fieldset class="payment-form-fields">
+	        <input type="hidden" class="form-control"
+	               name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+	               value="TILL_APM">
+	        <input type="hidden" class="form-control"
+	               name="${pdict.customForms.tillpaymentsForm.APM_extraData.htmlName}"
+	               value="${JSON.stringify(APM)}">
+	    </fieldset>
+        <isprint value="${Resource.msgf('checkout.billing.paymentOptions.tillAPMContent', 'tillpayment', null,  APM.paymentMethod)}" />
+    </div>
+</isloop>

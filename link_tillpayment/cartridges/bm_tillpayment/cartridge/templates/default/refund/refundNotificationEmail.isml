@@ -1,0 +1,13 @@
+<body>
+    <div>
+        <p>${Resource.msgf('greetings.refund.notification.email', 'tillpayment', null, pdict.customerName)}</p>
+    </div>
+    <p>
+        ${Resource.msgf('content.refund.notification.email', 'tillpayment', null, pdict.OrderNo)}
+    </p>
+    <p>
+        ${Resource.msgf('total.amount.refund.notification.email', 'tillpayment', null, pdict.orderAmount)}
+        <br/>
+        ${Resource.msgf('refund.amount.refund.notification.email', 'tillpayment', null, pdict.refundedAmount)}
+    </p>
+</body>

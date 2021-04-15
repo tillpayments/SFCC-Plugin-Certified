@@ -1,0 +1,19 @@
+{
+    "hooks": [
+        {
+            "name": "app.payment.processor.tillpayment_credit",
+            "script": "./cartridge/scripts/hooks/payment/processor/tillpayment_credit"
+        },
+        {
+            "name": "app.payment.form.processor.tillpayment_credit",
+            "script": "./cartridge/scripts/hooks/payment/processor/tillpayment_credit_form_processor"
+        },{
+            "name": "app.payment.processor.tillpayment_apm",
+            "script": "./cartridge/scripts/hooks/payment/processor/tillpayment_apm"
+        },
+        {
+            "name": "app.payment.form.processor.tillpayment_apm",
+            "script": "./cartridge/scripts/hooks/payment/processor/tillpayment_apm_form_processor"
+        }
+    ]
+}
