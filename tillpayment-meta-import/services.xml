@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns="http://www.demandware.com/xml/impex/services/2014-09-26">
+    <service-credential service-credential-id="tillpayment.api.credentials">
+        <url>https://secure.tillpayments.com/api/v3/transaction/</url>
+        <user-id/>
+        <password/>
+    </service-credential>
+    
+    <service-credential service-credential-id="tillpayment.api.apm.credentials">
+        <url>https://gateway.tillpayments.com/api/v3/transaction/</url>
+        <user-id/>
+        <password/>
+    </service-credential>
+	
+	<service-profile service-profile-id="tillpayment.api.profile">
+        <timeout-millis>10000</timeout-millis>
+        <rate-limit-enabled>true</rate-limit-enabled>
+        <rate-limit-calls>10</rate-limit-calls>
+        <rate-limit-millis>15000</rate-limit-millis>
+        <cb-enabled>true</cb-enabled>
+        <cb-calls>10</cb-calls>
+        <cb-millis>10000</cb-millis>
+    </service-profile>
+	
+    <service service-id="tillpayments.api.service">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>tillpayments</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>tillpayment.api.profile</profile-id>
+        <credential-id>tillpayment.api.credentials</credential-id>
+    </service>
+    
+    <service service-id="tillpayments.api.apm.service">
+        <service-type>HTTP</service-type>
+        <enabled>true</enabled>
+        <log-prefix>tillpayments</log-prefix>
+        <comm-log-enabled>true</comm-log-enabled>
+        <force-prd-enabled>true</force-prd-enabled>
+        <mock-mode-enabled>false</mock-mode-enabled>
+        <profile-id>tillpayment.api.profile</profile-id>
+        <credential-id>tillpayment.api.apm.credentials</credential-id>
+    </service>
+
+</services>

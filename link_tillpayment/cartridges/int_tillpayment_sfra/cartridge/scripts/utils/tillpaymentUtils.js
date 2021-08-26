@@ -690,6 +690,7 @@ Utils.getConfiguration = function () {
     var sharedSecret = Site.current.getCustomPreferenceValue('tillpaymentSharedSecret') || '';
     var apiKey = Site.current.getCustomPreferenceValue('tillpaymentApiKey') || '';
     var apmExtradata = Site.current.getCustomPreferenceValue('tillpaymentApmExtraData') || '';
+    var apmApiKey = Site.current.getCustomPreferenceValue('tillpaymentApiApmKey') || '';
 
     if (!(apiUsername && apiPassword && sharedSecret && apiKey && apmExtradata)) {
         Logger.error('Error: Tillpayment Business Manager configurations are missing.');
@@ -700,6 +701,7 @@ Utils.getConfiguration = function () {
         apiPassword: apiPassword,
         sharedSecret: sharedSecret,
         apiKey: apiKey,
+        apmApiKey: apmApiKey,
         apmExtradata: apmExtradata,
         isTillpaymentEnabled: Site.current.getCustomPreferenceValue('enableTillpayment') || false,
         paymentMode: Site.current.getCustomPreferenceValue('tillPaymentMode').value || '',

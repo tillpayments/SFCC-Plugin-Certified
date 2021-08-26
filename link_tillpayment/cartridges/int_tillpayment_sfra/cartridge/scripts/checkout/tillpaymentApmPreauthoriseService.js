@@ -20,7 +20,7 @@ var authorisePaymentService = {
         try {
             requestBody = tillpaymentUtils.getApmRequest(order);
             var authToken = tillpaymentUtils.getAuthenticationToken();
-            var requestUrl = tillpaymentUtils.getConfiguration().apiKey + tillpaymentUtils.serviceUtilities.serviceUrls.authorize;
+            var requestUrl = tillpaymentUtils.getConfiguration().apmApiKey + tillpaymentUtils.serviceUtilities.serviceUrls.authorize;
             requestParams = {
                 reqBody: requestBody,
                 authToken: authToken,
@@ -36,7 +36,7 @@ var authorisePaymentService = {
         var response;
         try {
             var requestParams = authorisePaymentService.generateRequest(order);
-            response = serviceUtils.serviceCall('POST', requestParams.requestUrl, JSON.stringify(requestParams.reqBody), requestParams.authToken);
+            response = serviceUtils.apmServiceCall('POST', requestParams.requestUrl, JSON.stringify(requestParams.reqBody), requestParams.authToken);
         } catch (exception) {
             Logger.error('Exception occured in APM preauthorise service execution ' + exception.message);
         }

@@ -35,8 +35,12 @@ function callAction(request, orderObj, actionType) {
     var usedAPIType = paymentAPIType(orderObj);
     var endPoint = usedAPIType.getEndpoint() + Resource.msg('api.transaction.' + actionType, 'tillpayment', null);
     var authCode = usedAPIType.getAPIAuthenticationToken();
-    var response = utils.serviceCall('POST', endPoint, JSON.stringify(request), authCode);
-
+    var response;
+    if (orderObj.getPaymentInstruments()[0].getPaymentMethod() === 'TILL_APM') {
+        response = utils.apmServiceCall('POST', endPoint, JSON.stringify(request), authCode);
+    } else {
+        response = utils.serviceCall('POST', endPoint, JSON.stringify(request), authCode);
+    }
     return response;
 }
 
@@ -534,7 +538,7 @@ function paymentAPIType(orderObj) {
                 return apiType.setAPIAuthenticationToken();
             },
             getEndpoint: function () {
-                return apiType.setEndpoint();
+                return apiType.setEndpoint(orderObj.getPaymentInstruments()[0].getPaymentMethod());
             }
         };
     }
@@ -546,7 +550,10 @@ var APITYPE = {
         setAPIAuthenticationToken: function () {
             return apiHelperJSON.getAuthenticationToken();
         },
-        setEndpoint: function () {
+        setEndpoint: function (paymentMethod) {
+            if (paymentMethod === 'TILL_APM') {
+                return apiHelperJSON.getConfiguration().apmApiKey;
+            }
             return apiHelperJSON.getConfiguration().apiKey;
         }
     }
